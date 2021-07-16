@@ -54,87 +54,71 @@
 
     <main class="flex-shrink-0">
         <div class="container col-xxl-8 px-4 py-5 mt-5">
-            <h1>The Code</h1>
+            <h1 id="customtextcolor">The Code</h1>
             <hr style="margin-top: 0;height:2px;border-width:0;color:gray;background-color:gray">
             <div class="row">
                 <div class="col-8" id="codeCol">
                     <pre><code class="language-javascript line-numbers">
+// fizzFizz function
+
 function fizzFizz(value1, value2) {
-    let returnValue = "";
+    let returnValue = [];
     for (let i = 1; i <= 100; i++) {
-        returnValue += ((i % value1 == 0 ? "Fizz" : "") + (i % value2 == 0 ? "Buzz" : "") || i) + " ";
+        returnValue.push((i % value1 == 0 ? "Fizz" : "") + (i % value2 == 0 ? "Buzz" : "") || i);
     }
+
     return returnValue;
+
 }
+
+// buzzBuzz function
 
 function buzzBuzz() {
-    let output = "";
-    let val1 = document.getElementById("fizzValue").value;
-    let val2 = document.getElementById("buzzValue").value;
-    output = fizzFizz(val1, val2);
-    document.getElementById("results").innerHTML = output;
-}
+    let value1 = document.getElementById("fizzValue").value;
+    let value2 = document.getElementById("buzzValue").value;
 
-function fizzBuzz() {
-    let output = [];
-    let headTemplate = document.getElementById("template-header");
-    let rowTemplate = document.getElementById("template-row-items");
+    let templateHTML = document.getElementById("template-row-items")
+    let resultsHTML = "";
+    let output = fizzFizz(value1, value2);
 
-    let templateHTML = rowtemplate.innerHTML;
-    let resultsHTML = headtemplate.innerHTML;
-
-    let val1 = document.getElementById("fizzValue").value;
-    let val2 = document.getElementById("buzzValue").value;
-
-    output = fizzFizz(val1, val2);
-    for (i = 1; i < output.length; i += 5) {
-        resultsHTML + templateHTML.replace('{{val1}}', output[i])
+    for (i = 0; i < output.length; i += 5) {
+        resultsHTML += templateHTML.innerHTML.replace('{{val1}}', output[i])
             .replace('{{val2}}', output[i + 1])
             .replace('{{val3}}', output[i + 2])
             .replace('{{val4}}', output[i + 3])
             .replace('{{val5}}', output[i + 4]);
     }
-document.getElementById("results").innerHTML = resultsHTML;
+
+    document.getElementById("results").innerHTML = resultsHTML;
 }
+
                 </code>
             </pre>
                 </div>
                 <div class="col" id="explainCol">
+                    <h1 id="customtextcolor">fizzFizz</h1>
+                    <p>The fizzFizz function pulls the user inputs from the function buzzBuzz and orders them as value1
+                        and value2. An incrementing for loop runs from 1 to 100 to display 'Fizz' when the given number,
+                        i, is divisible by value1. The same argument is used for value2 and 'Buzz'. If both conditions
+                        are met, the output is 'FizzBuzz'. If neither of the conditions are met, the output is the given
+                        number.
+                    </p>
 
-                    <p p-2>My JavaScript code utilizes three functions to complete the FizzBuzz challenge. </p>
+                    <h1 id="customtextcolor">buzzBuzz</h1>
+                    <p>The primary use of the second function is to display the game in a table. The first few lines
+                            are included for necessity; 10 and 11 pass the user inputs to fizzFizz, lines 13 through 15
+                            declare variables and information from fizzFizz needed for the following for loop to
+                            properly run.
 
-                    <h1>fizzFizz</h1>
-
-                    <p>The function fizzFizz does all the work by pulling the two user inputs, 'Fizz' and 'Buzz', that translate to value1 and
-                        value2. An incrementing for loop from 1 to 100 is added. When the number, 'i', is divisible by
-                        value1, 'Fizz' is the output. When i is divisible by value2, the output is 'Buzz'. When i is
-                        divisible by both value1 and value2, the output is 'FizzBuzz'.</p>
-
-                    <h1>buzzBuzz</h1>
-
-                    <p>The second function, buzzBuzz, is used to display and </p>
-
-                    <h1>fizzBuzz</h1>
-
-                    <p>The function fizzBuzz pulls two user inputs, 'Fizz' and
-                        'Buzz', that translate to value1 and value2. An
-                        incrementing for loop from 1 to 100 is added. When the
-                        number, 'i', is divisible by value1, 'Fizz' is the output.
-                        When i is divisible by value2, the output is 'Buzz'. When
-                        i is divisible by both value1 and value2, the output is
-                        'FizzBuzz'.</p>
-
+                            The incrementing for loop runs for the entirety of the fizzFizz data (from 1 to 100), but
+                            only gives five values per loop. Running for five values allows the for loop to align with
+                            the HTML template, displaying five outputs for each row in the table. The template
+                            placeholders are replaced by fizzFizz outputs to create a table!
+                    </p>
                 </div>
             </div>
         </div>
     </main>
-    //function fizzBuzz taking the user inputs (value1 and value2)
-    //for loop going from one to 100
-    //if i is a multiple of the first user input, Fizz is displayed
-    //if i is a multiple of the second user input, Buzz is displayed
-    //Fizz and Buzz are pulled together into FizzBuzz if both conditions are met, if none of the conditions are met then
-    i
-    is displayed alone
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

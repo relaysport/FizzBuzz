@@ -10,7 +10,20 @@ main>.container {
     background-color: #0EBFE9;
 }
 
+.custombackgroundcolor {
+    background-color: #0EBFE9;
+}
+
 #customtextcolor {
     color: #0EBFE9;
 ;
+}
+
+.customtextcolor {
+    color: #0EBFE9;
+    ;
+}
+
+.notbold {
+    font-weight: normal
 }

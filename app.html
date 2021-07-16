@@ -55,20 +55,15 @@
      <main class="flex-shrink-0">
          <div class="container mt-5">
              <div class="row row-cols-1 row-cols-lg-2">
-                 <div class="col col-lg-4 border-end border-2">
-                     <h3 class="fw-bold lh-1 mb-3">FIZZ BUZZ: A Coding Project</h3>
-                     <h4 class="lead">When it counts you Fizz Buzz. A javascript coding exercise using loops. Write a
-                         program that prints the numbers from 1 to 100 and for multiples of ‘3’ display
-                         <strong>“Fizz”</strong> instead of
-                         the number and for the multiples of ‘5’ display <strong>“Buzz”</strong>. If a mulitple of both
-                         display <strong>"FizzBuzz"</strong>.
-                     </h4>
-                     <h2 class="mt-2 mt-md-5">Instructions</h2>
-                     <p>Enter a fizz and a buzz value. Press the button and the values will appear.</p>
+                 <div class="col col-lg-4 border-end border-1">
+                     <h2 id="customtextcolor" class="border-bottom border-1">FizzBuzz Instructions</h2>
+                     <p>Enter a 'Fizz' value, enter a 'Buzz' value, and watch the division game come to life!
+                         
+                     </p>
                  </div>
                  <div class="col col-lg-8">
                      <div>
-                         <h2>Enter Values</h2>
+                         <h2 id="customtextcolor">Enter Values</h2>
                          <form class="row gy-2 gx-3">
                              <div class="col">
                                  <input id="fizzValue" type="number" class="form-control" placeholder="Enter 'Fizz' value"
@@ -79,10 +74,10 @@
                                       aria-label="buzzValue">
                              </div>
                              <div class="col-12 d-flex justify-content-end">
-                                 <button id="btnSubmit" onclick="buzzBuzz" type="button" class="btn btn-dark btn-lg">Let's go!</button>
+                                 <button id="btnSubmit" onclick="buzzBuzz()" type="button" class="btn btn-lg custombackgroundcolor text-white">Let's go!</button>
                              </div>
                          </form>
-                         <h2 class="mt-5 border-bottom border-2">Results</h2>
+                         <h2 id="customtextcolor" class="mt-5 border-bottom border-1">Results</h2>
                          <div class="table-responsive">
                              <table class="table table-striped table-sm">
                                  <tbody id="results">
@@ -90,18 +85,10 @@
                                  </tbody>
                              </table>
                              <!-- Template for displaying the output-->
-                             <script id="template-header" type="text/template">
-                                 <thead>
-                                    <tr><th colspan="5">Results for  fizz buzz</th></tr>
-                                 </thead>
-                             </script>
+                             
                              <script id="template-row-items" type="text/template">
                             <tr>
-                                <td>{{val1}}</td>
-                                <td>{{val2}}</td>
-                                <td>{{val3}}</td>
-                                <td>{{val4}}</td>
-                                <td>{{val5}}</td>
+                                <td>{{val1}}</td><td>{{val2}}</td><td>{{val3}}</td><td>{{val4}}</td><td>{{val5}}</td>
                             </tr>
                             </script>
                          </div>
