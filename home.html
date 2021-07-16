@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>Hundo</title>
+    <title>FizzBuzz | Wyatt Guthrie</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,10 +13,10 @@
 
     <link rel="stylesheet" href="/css/prism.css">
     <link rel="stylesheet" href="/css/site.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!--- This is the CSS for basic and branded Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -26,9 +26,9 @@
 
 <body class="d-flex flex-column h-100">
 
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav id="custombackgroundcolor" class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/index.html">JS Template</a>
+        <a class="navbar-brand" href="/home.html"><img src="img/favicon.ico" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,52 +36,45 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/home.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/app.html">The App</a>
+                    <a class="nav-link" href="/app.html">My Program</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/code.html">The Code</a>
+                    <a class="nav-link" href="/code.html">My Code</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/about.html">About Me</a>
                 </li>
             </ul>
         </div>
-    </div>
-</nav>
+        </div>
+    </nav>
 
     <main class="flex-shrink-0">
-       <div class="container">
-           <h1 class="mt-5">Template with dark fixed navbar and sticky footer</h1>
-           <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with padding-top: 60px; on the main > .container.</p>
-       </div>
+        <div class="container">
+            <h1 id="customtextcolor" class="mt-5 text-center">FIZZBUZZ!!!</h1>
+           <br>
+           <hr>
+           <p class="text-center h5">This challenge is based around the child's game, FizzBuzz, which is used to teach
+                division. In this game, several players alternate counting up to 100 starting with one. For every
+                multiple of three, the player says "Fizz" instead of the number; for every multiple of five, the player
+                says "Buzz" instead of the number. When the number is a multiple of both three and five, the player says
+                "FizzBuzz". My program uses HTML, JS, CSS, and Bootstrap to replicate FizzBuzz.</p>
+                <hr>
+                <br>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div id="customtextcolor" class="col col-md-auto text-center"><i class="fab fa-js-square big-icon"></i>
+            </div>
+            <div id="customtextcolor" class="col col-md-auto text-center"><i class="fab fa-bootstrap big-icon"></i>
+            </div>
+            <div id="customtextcolor" class="col col-md-auto text-center"><i class="fab fa-html5 big-icon"></i></div>
+            <div id="customtextcolor" class="col col-md-auto text-center"><i class="fab fa-css3-alt big-icon"></i></div>
+        </div>
     </main>
 
-
-    <footer class="footer mt-auto py-3 bg-dark">
-        <div class="container-fluid text-center text-warning">
-            <div class="row">
-                <div class="col">
-                    &copy2021 <span class="text-muted">Wyatt Guthrie | gutwg-24@rhodes.edu</span>
-                </div>
-
-                <div class="col">
-                </div>
-                <div class="col">
-                    <a href="https://www.linkedin.com/in/wyatt-guthrie-61b104217/" target="_blank"><i
-                            class="fab fa-linkedin fa-3x text-warning"></i></a>
-                    <a href="https://github.com/relaysport" target="_blank"><i
-                            class="fab fa-github fa-3x text-warning"></i></a>
-                    <a href="https://twitter.com/tidaltidaltidal" target="_blank"><i 
-                            class="fab fa-twitter fa-3x text-warning"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
@@ -95,8 +88,8 @@
 
     <!-- FontAwesome JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
-                integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
-                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   
+        integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 </html>

@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>Hundo | The Code</title>
+    <title>FizzBuzz | My Code</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,9 +26,9 @@
 
 <body class="d-flex flex-column h-100">
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav id="custombackgroundcolor" class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">JS Template</a>
+            <a class="navbar-brand" href="/code.html"><img src="img/favicon.ico" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,13 +36,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/index.html">Home</a>
+                        <a class="nav-link" href="/home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/app.html">The App</a>
+                        <a class="nav-link" href="/app.html">My Program</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/code.html">The Code</a>
+                        <a class="nav-link active" aria-current="page" href="/code.html">My Code</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about.html">About Me</a>
@@ -53,32 +53,88 @@
     </nav>
 
     <main class="flex-shrink-0">
-        <div class="container">
-            <h1 class="mt-5">Template with dark fixed navbar and sticky footer</h1>
-            <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and
-                CSS. A fixed navbar has been added with padding-top: 60px; on the main > .container.</p>
-        </div>
-    </main>
-
-
-    <footer class="footer mt-auto py-3 bg-dark">
-        <div class="container-fluid text-center text-warning">
+        <div class="container col-xxl-8 px-4 py-5 mt-5">
+            <h1>The Code</h1>
+            <hr style="margin-top: 0;height:2px;border-width:0;color:gray;background-color:gray">
             <div class="row">
-                <div class="col">
-                    &copy2021 <span class="text-muted">Wyatt Guthrie | gutwg-24@rhodes.edu</span>
-                </div>
+                <div class="col-8" id="codeCol">
+                    <pre><code class="language-javascript line-numbers">
+function fizzFizz(value1, value2) {
+    let returnValue = "";
+    for (let i = 1; i <= 100; i++) {
+        returnValue += ((i % value1 == 0 ? "Fizz" : "") + (i % value2 == 0 ? "Buzz" : "") || i) + " ";
+    }
+    return returnValue;
+}
 
-                <div class="col">
+function buzzBuzz() {
+    let output = "";
+    let val1 = document.getElementById("fizzValue").value;
+    let val2 = document.getElementById("buzzValue").value;
+    output = fizzFizz(val1, val2);
+    document.getElementById("results").innerHTML = output;
+}
+
+function fizzBuzz() {
+    let output = [];
+    let headTemplate = document.getElementById("template-header");
+    let rowTemplate = document.getElementById("template-row-items");
+
+    let templateHTML = rowtemplate.innerHTML;
+    let resultsHTML = headtemplate.innerHTML;
+
+    let val1 = document.getElementById("fizzValue").value;
+    let val2 = document.getElementById("buzzValue").value;
+
+    output = fizzFizz(val1, val2);
+    for (i = 1; i < output.length; i += 5) {
+        resultsHTML + templateHTML.replace('{{val1}}', output[i])
+            .replace('{{val2}}', output[i + 1])
+            .replace('{{val3}}', output[i + 2])
+            .replace('{{val4}}', output[i + 3])
+            .replace('{{val5}}', output[i + 4]);
+    }
+document.getElementById("results").innerHTML = resultsHTML;
+}
+                </code>
+            </pre>
                 </div>
-                <div class="col">
-                    <a href="#" target="_blank"><i class="fab fa-linkedin fa-3x text-muted"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-github fa-3x text-muted"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter fa-3x text-muted"></i></a>
+                <div class="col" id="explainCol">
+
+                    <p p-2>My JavaScript code utilizes three functions to complete the FizzBuzz challenge. </p>
+
+                    <h1>fizzFizz</h1>
+
+                    <p>The function fizzFizz does all the work by pulling the two user inputs, 'Fizz' and 'Buzz', that translate to value1 and
+                        value2. An incrementing for loop from 1 to 100 is added. When the number, 'i', is divisible by
+                        value1, 'Fizz' is the output. When i is divisible by value2, the output is 'Buzz'. When i is
+                        divisible by both value1 and value2, the output is 'FizzBuzz'.</p>
+
+                    <h1>buzzBuzz</h1>
+
+                    <p>The second function, buzzBuzz, is used to display and </p>
+
+                    <h1>fizzBuzz</h1>
+
+                    <p>The function fizzBuzz pulls two user inputs, 'Fizz' and
+                        'Buzz', that translate to value1 and value2. An
+                        incrementing for loop from 1 to 100 is added. When the
+                        number, 'i', is divisible by value1, 'Fizz' is the output.
+                        When i is divisible by value2, the output is 'Buzz'. When
+                        i is divisible by both value1 and value2, the output is
+                        'FizzBuzz'.</p>
+
                 </div>
             </div>
         </div>
-    </footer>
-
+    </main>
+    //function fizzBuzz taking the user inputs (value1 and value2)
+    //for loop going from one to 100
+    //if i is a multiple of the first user input, Fizz is displayed
+    //if i is a multiple of the second user input, Buzz is displayed
+    //Fizz and Buzz are pulled together into FizzBuzz if both conditions are met, if none of the conditions are met then
+    i
+    is displayed alone
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
